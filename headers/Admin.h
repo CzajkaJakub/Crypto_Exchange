@@ -6,13 +6,14 @@
 #define CRYPTO_EXCHANGE_ADMIN_H
 
 
-#include "Account.h"
+#include "ExchangeDatabase.h"
 
-class Admin:
-        public Account{
+class Admin{
 public:
     static void addNewCurrencyToDatabase(ExchangeDatabase& database);
     static void deleteTheCurrency(ExchangeDatabase& database);
+    static void showAvailableCryptos(ExchangeDatabase &database);
+    static void showAllAccountsInDatabase(ExchangeDatabase &database);
 };
 
 

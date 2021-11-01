@@ -6,8 +6,23 @@
 #define CRYPTO_EXCHANGE_USER_H
 
 
-class User {
+#include <string>
 
+using namespace std;
+
+class User{
+private:
+    string login;
+    string password;
+    double dollarAmount;
+public:
+    User(string login, string password);
+    string getLogin();
+    string getPassword();
+    double getDollarAmount();
+    void addMoney(double value);
+    void withDrawYourMoney(double value);
+    void changePassword(string password);
 };
 
 

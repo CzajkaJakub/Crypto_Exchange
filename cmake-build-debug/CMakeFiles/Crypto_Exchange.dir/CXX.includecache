@@ -6,15 +6,29 @@
 
 #IncludeRegexTransform: 
 
-D:/programowanie/GitHub/c++/Crypto_Exchange/headers/Account.h
+D:/programowanie/GitHub/c++/Crypto_Exchange/classes/Admin.cpp
+iostream
+-
+../headers/Admin.h
+D:/programowanie/GitHub/c++/Crypto_Exchange/headers/Admin.h
+
+D:/programowanie/GitHub/c++/Crypto_Exchange/classes/ExchangeDatabase.cpp
+../headers/ExchangeDatabase.h
+D:/programowanie/GitHub/c++/Crypto_Exchange/headers/ExchangeDatabase.h
 string
 -
-ExchangeDatabase.h
-D:/programowanie/GitHub/c++/Crypto_Exchange/headers/ExchangeDatabase.h
+iostream
+-
+
+D:/programowanie/GitHub/c++/Crypto_Exchange/classes/User.cpp
+iostream
+-
+../headers/User.h
+D:/programowanie/GitHub/c++/Crypto_Exchange/headers/User.h
 
 D:/programowanie/GitHub/c++/Crypto_Exchange/headers/Admin.h
-Account.h
-D:/programowanie/GitHub/c++/Crypto_Exchange/headers/Account.h
+ExchangeDatabase.h
+D:/programowanie/GitHub/c++/Crypto_Exchange/headers/ExchangeDatabase.h
 
 D:/programowanie/GitHub/c++/Crypto_Exchange/headers/Currency.h
 string
@@ -27,14 +41,18 @@ vector
 -
 Currency.h
 D:/programowanie/GitHub/c++/Crypto_Exchange/headers/Currency.h
+User.h
+D:/programowanie/GitHub/c++/Crypto_Exchange/headers/User.h
+
+D:/programowanie/GitHub/c++/Crypto_Exchange/headers/User.h
+string
+-
 
 D:/programowanie/GitHub/c++/Crypto_Exchange/main.cpp
 iostream
 -
 headers/ExchangeDatabase.h
 D:/programowanie/GitHub/c++/Crypto_Exchange/headers/ExchangeDatabase.h
-headers/Currency.h
-D:/programowanie/GitHub/c++/Crypto_Exchange/headers/Currency.h
 headers/Admin.h
 D:/programowanie/GitHub/c++/Crypto_Exchange/headers/Admin.h
 

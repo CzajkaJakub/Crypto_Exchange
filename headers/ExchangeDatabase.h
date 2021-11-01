@@ -8,6 +8,8 @@
 #include <string>
 #include <vector>
 #include "Currency.h"
+#include "User.h"
+
 
 using namespace std;
 
@@ -18,6 +20,7 @@ private:
     string adminPassword = "admin";
     int numbersOfCryptoInBase;
     vector<Currency> cryptoBase;
+    vector<User> accounts;
 
 public:
     ExchangeDatabase();
@@ -27,6 +30,12 @@ public:
     int getNumberOfCryptoInBase() const;
     void addCurrency(const Currency& currency);
     void removeCurrency(int position);
+    bool checkAvailabilityOfLogin(const string& login);
+    void addAccount(User user);
+    bool checkDataToAccount(const string& login, const string& password);
+    User getUser(const string& login);
+    void updateData(User user);
+    vector<User> getAccounts();
 };
 
 

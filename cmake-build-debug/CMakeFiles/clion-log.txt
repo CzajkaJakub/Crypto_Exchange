@@ -1,13 +1,8 @@
 C:\Users\Jakub\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\213.6777.58\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" K:\programowanie\GitHub\c++\Crypto_Exchange
--- Configuring done
-CMake Error at CMakeLists.txt:6 (add_executable):
-  Cannot find source file:
-
-    classes/Admin.cpp
+CMake Error at CMakeLists.txt:6:
+  Parse error.  Expected a command name, got unquoted argument with text
+  "<<<<<<<".
 
 
-CMake Error at CMakeLists.txt:6 (add_executable):
-  No SOURCES given to target: Crypto_Exchange
-
-
-CMake Generate step failed.  Build files cannot be regenerated correctly.
+-- Configuring incomplete, errors occurred!
+See also "K:/programowanie/GitHub/c++/Crypto_Exchange/cmake-build-debug/CMakeFiles/CMakeOutput.log".
