@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/programowanie/GitHub/c++/Crypto_Exchange/headers/Account.h
+string
+-
+ExchangeDatabase.h
+D:/programowanie/GitHub/c++/Crypto_Exchange/headers/ExchangeDatabase.h
+
+D:/programowanie/GitHub/c++/Crypto_Exchange/headers/Admin.h
+Account.h
+D:/programowanie/GitHub/c++/Crypto_Exchange/headers/Account.h
+
+D:/programowanie/GitHub/c++/Crypto_Exchange/headers/Currency.h
+string
+-
+
+D:/programowanie/GitHub/c++/Crypto_Exchange/headers/ExchangeDatabase.h
+string
+-
+vector
+-
+Currency.h
+D:/programowanie/GitHub/c++/Crypto_Exchange/headers/Currency.h
+
+D:/programowanie/GitHub/c++/Crypto_Exchange/main.cpp
+iostream
+-
+headers/ExchangeDatabase.h
+D:/programowanie/GitHub/c++/Crypto_Exchange/headers/ExchangeDatabase.h
+headers/Currency.h
+D:/programowanie/GitHub/c++/Crypto_Exchange/headers/Currency.h
+headers/Admin.h
+D:/programowanie/GitHub/c++/Crypto_Exchange/headers/Admin.h
+

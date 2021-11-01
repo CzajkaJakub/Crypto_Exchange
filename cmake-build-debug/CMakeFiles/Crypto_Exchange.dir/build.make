@@ -78,19 +78,94 @@ CMakeFiles/Crypto_Exchange.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Crypto_Exchange.dir/main.cpp.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\programowanie\GitHub\c++\Crypto_Exchange\main.cpp -o CMakeFiles\Crypto_Exchange.dir\main.cpp.s
 
+CMakeFiles/Crypto_Exchange.dir/classes/Account.cpp.obj: CMakeFiles/Crypto_Exchange.dir/flags.make
+CMakeFiles/Crypto_Exchange.dir/classes/Account.cpp.obj: ../classes/Account.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\programowanie\GitHub\c++\Crypto_Exchange\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Crypto_Exchange.dir/classes/Account.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Crypto_Exchange.dir\classes\Account.cpp.obj -c D:\programowanie\GitHub\c++\Crypto_Exchange\classes\Account.cpp
+
+CMakeFiles/Crypto_Exchange.dir/classes/Account.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Crypto_Exchange.dir/classes/Account.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\programowanie\GitHub\c++\Crypto_Exchange\classes\Account.cpp > CMakeFiles\Crypto_Exchange.dir\classes\Account.cpp.i
+
+CMakeFiles/Crypto_Exchange.dir/classes/Account.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Crypto_Exchange.dir/classes/Account.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\programowanie\GitHub\c++\Crypto_Exchange\classes\Account.cpp -o CMakeFiles\Crypto_Exchange.dir\classes\Account.cpp.s
+
+CMakeFiles/Crypto_Exchange.dir/classes/Admin.cpp.obj: CMakeFiles/Crypto_Exchange.dir/flags.make
+CMakeFiles/Crypto_Exchange.dir/classes/Admin.cpp.obj: ../classes/Admin.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\programowanie\GitHub\c++\Crypto_Exchange\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Crypto_Exchange.dir/classes/Admin.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Crypto_Exchange.dir\classes\Admin.cpp.obj -c D:\programowanie\GitHub\c++\Crypto_Exchange\classes\Admin.cpp
+
+CMakeFiles/Crypto_Exchange.dir/classes/Admin.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Crypto_Exchange.dir/classes/Admin.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\programowanie\GitHub\c++\Crypto_Exchange\classes\Admin.cpp > CMakeFiles\Crypto_Exchange.dir\classes\Admin.cpp.i
+
+CMakeFiles/Crypto_Exchange.dir/classes/Admin.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Crypto_Exchange.dir/classes/Admin.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\programowanie\GitHub\c++\Crypto_Exchange\classes\Admin.cpp -o CMakeFiles\Crypto_Exchange.dir\classes\Admin.cpp.s
+
+CMakeFiles/Crypto_Exchange.dir/classes/User.cpp.obj: CMakeFiles/Crypto_Exchange.dir/flags.make
+CMakeFiles/Crypto_Exchange.dir/classes/User.cpp.obj: ../classes/User.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\programowanie\GitHub\c++\Crypto_Exchange\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Crypto_Exchange.dir/classes/User.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Crypto_Exchange.dir\classes\User.cpp.obj -c D:\programowanie\GitHub\c++\Crypto_Exchange\classes\User.cpp
+
+CMakeFiles/Crypto_Exchange.dir/classes/User.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Crypto_Exchange.dir/classes/User.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\programowanie\GitHub\c++\Crypto_Exchange\classes\User.cpp > CMakeFiles\Crypto_Exchange.dir\classes\User.cpp.i
+
+CMakeFiles/Crypto_Exchange.dir/classes/User.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Crypto_Exchange.dir/classes/User.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\programowanie\GitHub\c++\Crypto_Exchange\classes\User.cpp -o CMakeFiles\Crypto_Exchange.dir\classes\User.cpp.s
+
+CMakeFiles/Crypto_Exchange.dir/classes/ExchangeDatabase.cpp.obj: CMakeFiles/Crypto_Exchange.dir/flags.make
+CMakeFiles/Crypto_Exchange.dir/classes/ExchangeDatabase.cpp.obj: ../classes/ExchangeDatabase.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\programowanie\GitHub\c++\Crypto_Exchange\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Crypto_Exchange.dir/classes/ExchangeDatabase.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Crypto_Exchange.dir\classes\ExchangeDatabase.cpp.obj -c D:\programowanie\GitHub\c++\Crypto_Exchange\classes\ExchangeDatabase.cpp
+
+CMakeFiles/Crypto_Exchange.dir/classes/ExchangeDatabase.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Crypto_Exchange.dir/classes/ExchangeDatabase.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\programowanie\GitHub\c++\Crypto_Exchange\classes\ExchangeDatabase.cpp > CMakeFiles\Crypto_Exchange.dir\classes\ExchangeDatabase.cpp.i
+
+CMakeFiles/Crypto_Exchange.dir/classes/ExchangeDatabase.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Crypto_Exchange.dir/classes/ExchangeDatabase.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\programowanie\GitHub\c++\Crypto_Exchange\classes\ExchangeDatabase.cpp -o CMakeFiles\Crypto_Exchange.dir\classes\ExchangeDatabase.cpp.s
+
+CMakeFiles/Crypto_Exchange.dir/classes/Currency.cpp.obj: CMakeFiles/Crypto_Exchange.dir/flags.make
+CMakeFiles/Crypto_Exchange.dir/classes/Currency.cpp.obj: ../classes/Currency.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\programowanie\GitHub\c++\Crypto_Exchange\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Crypto_Exchange.dir/classes/Currency.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Crypto_Exchange.dir\classes\Currency.cpp.obj -c D:\programowanie\GitHub\c++\Crypto_Exchange\classes\Currency.cpp
+
+CMakeFiles/Crypto_Exchange.dir/classes/Currency.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Crypto_Exchange.dir/classes/Currency.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\programowanie\GitHub\c++\Crypto_Exchange\classes\Currency.cpp > CMakeFiles\Crypto_Exchange.dir\classes\Currency.cpp.i
+
+CMakeFiles/Crypto_Exchange.dir/classes/Currency.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Crypto_Exchange.dir/classes/Currency.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\programowanie\GitHub\c++\Crypto_Exchange\classes\Currency.cpp -o CMakeFiles\Crypto_Exchange.dir\classes\Currency.cpp.s
+
 # Object files for target Crypto_Exchange
 Crypto_Exchange_OBJECTS = \
-"CMakeFiles/Crypto_Exchange.dir/main.cpp.obj"
+"CMakeFiles/Crypto_Exchange.dir/main.cpp.obj" \
+"CMakeFiles/Crypto_Exchange.dir/classes/Account.cpp.obj" \
+"CMakeFiles/Crypto_Exchange.dir/classes/Admin.cpp.obj" \
+"CMakeFiles/Crypto_Exchange.dir/classes/User.cpp.obj" \
+"CMakeFiles/Crypto_Exchange.dir/classes/ExchangeDatabase.cpp.obj" \
+"CMakeFiles/Crypto_Exchange.dir/classes/Currency.cpp.obj"
 
 # External object files for target Crypto_Exchange
 Crypto_Exchange_EXTERNAL_OBJECTS =
 
 Crypto_Exchange.exe: CMakeFiles/Crypto_Exchange.dir/main.cpp.obj
+Crypto_Exchange.exe: CMakeFiles/Crypto_Exchange.dir/classes/Account.cpp.obj
+Crypto_Exchange.exe: CMakeFiles/Crypto_Exchange.dir/classes/Admin.cpp.obj
+Crypto_Exchange.exe: CMakeFiles/Crypto_Exchange.dir/classes/User.cpp.obj
+Crypto_Exchange.exe: CMakeFiles/Crypto_Exchange.dir/classes/ExchangeDatabase.cpp.obj
+Crypto_Exchange.exe: CMakeFiles/Crypto_Exchange.dir/classes/Currency.cpp.obj
 Crypto_Exchange.exe: CMakeFiles/Crypto_Exchange.dir/build.make
 Crypto_Exchange.exe: CMakeFiles/Crypto_Exchange.dir/linklibs.rsp
 Crypto_Exchange.exe: CMakeFiles/Crypto_Exchange.dir/objects1.rsp
 Crypto_Exchange.exe: CMakeFiles/Crypto_Exchange.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\programowanie\GitHub\c++\Crypto_Exchange\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Crypto_Exchange.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\programowanie\GitHub\c++\Crypto_Exchange\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Crypto_Exchange.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Crypto_Exchange.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

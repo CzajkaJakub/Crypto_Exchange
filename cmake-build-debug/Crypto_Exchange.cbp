@@ -80,6 +80,36 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/programowanie/GitHub/c++/Crypto_Exchange/classes/Account.cpp">
+			<Option target="Crypto_Exchange"/>
+		</Unit>
+		<Unit filename="D:/programowanie/GitHub/c++/Crypto_Exchange/classes/Admin.cpp">
+			<Option target="Crypto_Exchange"/>
+		</Unit>
+		<Unit filename="D:/programowanie/GitHub/c++/Crypto_Exchange/classes/Currency.cpp">
+			<Option target="Crypto_Exchange"/>
+		</Unit>
+		<Unit filename="D:/programowanie/GitHub/c++/Crypto_Exchange/classes/ExchangeDatabase.cpp">
+			<Option target="Crypto_Exchange"/>
+		</Unit>
+		<Unit filename="D:/programowanie/GitHub/c++/Crypto_Exchange/classes/User.cpp">
+			<Option target="Crypto_Exchange"/>
+		</Unit>
+		<Unit filename="D:/programowanie/GitHub/c++/Crypto_Exchange/headers/Account.h">
+			<Option target="Crypto_Exchange"/>
+		</Unit>
+		<Unit filename="D:/programowanie/GitHub/c++/Crypto_Exchange/headers/Admin.h">
+			<Option target="Crypto_Exchange"/>
+		</Unit>
+		<Unit filename="D:/programowanie/GitHub/c++/Crypto_Exchange/headers/Currency.h">
+			<Option target="Crypto_Exchange"/>
+		</Unit>
+		<Unit filename="D:/programowanie/GitHub/c++/Crypto_Exchange/headers/ExchangeDatabase.h">
+			<Option target="Crypto_Exchange"/>
+		</Unit>
+		<Unit filename="D:/programowanie/GitHub/c++/Crypto_Exchange/headers/User.h">
+			<Option target="Crypto_Exchange"/>
+		</Unit>
 		<Unit filename="D:/programowanie/GitHub/c++/Crypto_Exchange/main.cpp">
 			<Option target="Crypto_Exchange"/>
 		</Unit>

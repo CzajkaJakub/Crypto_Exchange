@@ -8,6 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "D:/programowanie/GitHub/c++/Crypto_Exchange/classes/Account.cpp" "D:/programowanie/GitHub/c++/Crypto_Exchange/cmake-build-debug/CMakeFiles/Crypto_Exchange.dir/classes/Account.cpp.obj"
+  "D:/programowanie/GitHub/c++/Crypto_Exchange/classes/Admin.cpp" "D:/programowanie/GitHub/c++/Crypto_Exchange/cmake-build-debug/CMakeFiles/Crypto_Exchange.dir/classes/Admin.cpp.obj"
+  "D:/programowanie/GitHub/c++/Crypto_Exchange/classes/Currency.cpp" "D:/programowanie/GitHub/c++/Crypto_Exchange/cmake-build-debug/CMakeFiles/Crypto_Exchange.dir/classes/Currency.cpp.obj"
+  "D:/programowanie/GitHub/c++/Crypto_Exchange/classes/ExchangeDatabase.cpp" "D:/programowanie/GitHub/c++/Crypto_Exchange/cmake-build-debug/CMakeFiles/Crypto_Exchange.dir/classes/ExchangeDatabase.cpp.obj"
+  "D:/programowanie/GitHub/c++/Crypto_Exchange/classes/User.cpp" "D:/programowanie/GitHub/c++/Crypto_Exchange/cmake-build-debug/CMakeFiles/Crypto_Exchange.dir/classes/User.cpp.obj"
   "D:/programowanie/GitHub/c++/Crypto_Exchange/main.cpp" "D:/programowanie/GitHub/c++/Crypto_Exchange/cmake-build-debug/CMakeFiles/Crypto_Exchange.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

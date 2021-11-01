@@ -128,6 +128,126 @@ Crypto_Exchange/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crypto_Exchange.dir\build.make CMakeFiles/Crypto_Exchange.dir/build
 .PHONY : Crypto_Exchange/fast
 
+classes/Account.obj: classes/Account.cpp.obj
+.PHONY : classes/Account.obj
+
+# target to build an object file
+classes/Account.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crypto_Exchange.dir\build.make CMakeFiles/Crypto_Exchange.dir/classes/Account.cpp.obj
+.PHONY : classes/Account.cpp.obj
+
+classes/Account.i: classes/Account.cpp.i
+.PHONY : classes/Account.i
+
+# target to preprocess a source file
+classes/Account.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crypto_Exchange.dir\build.make CMakeFiles/Crypto_Exchange.dir/classes/Account.cpp.i
+.PHONY : classes/Account.cpp.i
+
+classes/Account.s: classes/Account.cpp.s
+.PHONY : classes/Account.s
+
+# target to generate assembly for a file
+classes/Account.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crypto_Exchange.dir\build.make CMakeFiles/Crypto_Exchange.dir/classes/Account.cpp.s
+.PHONY : classes/Account.cpp.s
+
+classes/Admin.obj: classes/Admin.cpp.obj
+.PHONY : classes/Admin.obj
+
+# target to build an object file
+classes/Admin.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crypto_Exchange.dir\build.make CMakeFiles/Crypto_Exchange.dir/classes/Admin.cpp.obj
+.PHONY : classes/Admin.cpp.obj
+
+classes/Admin.i: classes/Admin.cpp.i
+.PHONY : classes/Admin.i
+
+# target to preprocess a source file
+classes/Admin.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crypto_Exchange.dir\build.make CMakeFiles/Crypto_Exchange.dir/classes/Admin.cpp.i
+.PHONY : classes/Admin.cpp.i
+
+classes/Admin.s: classes/Admin.cpp.s
+.PHONY : classes/Admin.s
+
+# target to generate assembly for a file
+classes/Admin.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crypto_Exchange.dir\build.make CMakeFiles/Crypto_Exchange.dir/classes/Admin.cpp.s
+.PHONY : classes/Admin.cpp.s
+
+classes/Currency.obj: classes/Currency.cpp.obj
+.PHONY : classes/Currency.obj
+
+# target to build an object file
+classes/Currency.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crypto_Exchange.dir\build.make CMakeFiles/Crypto_Exchange.dir/classes/Currency.cpp.obj
+.PHONY : classes/Currency.cpp.obj
+
+classes/Currency.i: classes/Currency.cpp.i
+.PHONY : classes/Currency.i
+
+# target to preprocess a source file
+classes/Currency.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crypto_Exchange.dir\build.make CMakeFiles/Crypto_Exchange.dir/classes/Currency.cpp.i
+.PHONY : classes/Currency.cpp.i
+
+classes/Currency.s: classes/Currency.cpp.s
+.PHONY : classes/Currency.s
+
+# target to generate assembly for a file
+classes/Currency.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crypto_Exchange.dir\build.make CMakeFiles/Crypto_Exchange.dir/classes/Currency.cpp.s
+.PHONY : classes/Currency.cpp.s
+
+classes/ExchangeDatabase.obj: classes/ExchangeDatabase.cpp.obj
+.PHONY : classes/ExchangeDatabase.obj
+
+# target to build an object file
+classes/ExchangeDatabase.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crypto_Exchange.dir\build.make CMakeFiles/Crypto_Exchange.dir/classes/ExchangeDatabase.cpp.obj
+.PHONY : classes/ExchangeDatabase.cpp.obj
+
+classes/ExchangeDatabase.i: classes/ExchangeDatabase.cpp.i
+.PHONY : classes/ExchangeDatabase.i
+
+# target to preprocess a source file
+classes/ExchangeDatabase.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crypto_Exchange.dir\build.make CMakeFiles/Crypto_Exchange.dir/classes/ExchangeDatabase.cpp.i
+.PHONY : classes/ExchangeDatabase.cpp.i
+
+classes/ExchangeDatabase.s: classes/ExchangeDatabase.cpp.s
+.PHONY : classes/ExchangeDatabase.s
+
+# target to generate assembly for a file
+classes/ExchangeDatabase.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crypto_Exchange.dir\build.make CMakeFiles/Crypto_Exchange.dir/classes/ExchangeDatabase.cpp.s
+.PHONY : classes/ExchangeDatabase.cpp.s
+
+classes/User.obj: classes/User.cpp.obj
+.PHONY : classes/User.obj
+
+# target to build an object file
+classes/User.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crypto_Exchange.dir\build.make CMakeFiles/Crypto_Exchange.dir/classes/User.cpp.obj
+.PHONY : classes/User.cpp.obj
+
+classes/User.i: classes/User.cpp.i
+.PHONY : classes/User.i
+
+# target to preprocess a source file
+classes/User.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crypto_Exchange.dir\build.make CMakeFiles/Crypto_Exchange.dir/classes/User.cpp.i
+.PHONY : classes/User.cpp.i
+
+classes/User.s: classes/User.cpp.s
+.PHONY : classes/User.s
+
+# target to generate assembly for a file
+classes/User.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crypto_Exchange.dir\build.make CMakeFiles/Crypto_Exchange.dir/classes/User.cpp.s
+.PHONY : classes/User.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -161,6 +281,21 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Crypto_Exchange
+	@echo ... classes/Account.obj
+	@echo ... classes/Account.i
+	@echo ... classes/Account.s
+	@echo ... classes/Admin.obj
+	@echo ... classes/Admin.i
+	@echo ... classes/Admin.s
+	@echo ... classes/Currency.obj
+	@echo ... classes/Currency.i
+	@echo ... classes/Currency.s
+	@echo ... classes/ExchangeDatabase.obj
+	@echo ... classes/ExchangeDatabase.i
+	@echo ... classes/ExchangeDatabase.s
+	@echo ... classes/User.obj
+	@echo ... classes/User.i
+	@echo ... classes/User.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
