@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Crypto_Exchange.dir/classes/Account.cpp.obj"
   "CMakeFiles/Crypto_Exchange.dir/classes/Admin.cpp.obj"
   "CMakeFiles/Crypto_Exchange.dir/classes/Currency.cpp.obj"
   "CMakeFiles/Crypto_Exchange.dir/classes/ExchangeDatabase.cpp.obj"

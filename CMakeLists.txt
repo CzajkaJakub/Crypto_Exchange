@@ -3,4 +3,4 @@ project(Crypto_Exchange)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Crypto_Exchange main.cpp classes/Account.cpp headers/Account.h classes/Admin.cpp headers/Admin.h classes/User.cpp headers/User.h classes/ExchangeDatabase.cpp headers/ExchangeDatabase.h classes/Currency.cpp headers/Currency.h)
+add_executable(Crypto_Exchange main.cpp classes/Admin.cpp headers/Admin.h classes/User.cpp headers/User.h classes/ExchangeDatabase.cpp headers/ExchangeDatabase.h classes/Currency.cpp headers/Currency.h)

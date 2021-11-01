@@ -5,6 +5,8 @@
 #include <iostream>
 #include "../headers/Admin.h"
 
+
+
 void Admin::deleteTheCurrency(ExchangeDatabase& database) {
     int posInVector = 0;
 
@@ -47,6 +49,21 @@ void Admin::addNewCurrencyToDatabase(ExchangeDatabase& database) {
     database.addCurrency(Currency(name, value));
     printf("Currency added to the database : %s, value : %.2lf $.\n", name.c_str(), value);
 }
+
+
+void Admin::showAvailableCryptos(ExchangeDatabase &database) {
+    for(auto currency : database.getCryptoBase()){
+        cout << currency.getName() << " value : " << currency.getValue() << " $." << endl;
+    }
+}
+
+void Admin::showAllAccountsInDatabase(ExchangeDatabase &database) {
+    for(User account : database.getAccounts()){
+        cout << "Login: " << account.getLogin() << " Password: "<< account.getPassword() << " Amount: " << account.getDollarAmount()<<endl;
+    }
+}
+
+
 
 
 

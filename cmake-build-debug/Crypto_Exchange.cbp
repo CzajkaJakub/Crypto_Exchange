@@ -80,9 +80,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/programowanie/GitHub/c++/Crypto_Exchange/classes/Account.cpp">
-			<Option target="Crypto_Exchange"/>
-		</Unit>
 		<Unit filename="D:/programowanie/GitHub/c++/Crypto_Exchange/classes/Admin.cpp">
 			<Option target="Crypto_Exchange"/>
 		</Unit>
@@ -93,9 +90,6 @@
 			<Option target="Crypto_Exchange"/>
 		</Unit>
 		<Unit filename="D:/programowanie/GitHub/c++/Crypto_Exchange/classes/User.cpp">
-			<Option target="Crypto_Exchange"/>
-		</Unit>
-		<Unit filename="D:/programowanie/GitHub/c++/Crypto_Exchange/headers/Account.h">
 			<Option target="Crypto_Exchange"/>
 		</Unit>
 		<Unit filename="D:/programowanie/GitHub/c++/Crypto_Exchange/headers/Admin.h">
