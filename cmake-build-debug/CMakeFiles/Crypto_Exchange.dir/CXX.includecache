@@ -20,12 +20,6 @@ string
 iostream
 -
 
-D:/programowanie/GitHub/c++/Crypto_Exchange/classes/User.cpp
-iostream
--
-../headers/User.h
-D:/programowanie/GitHub/c++/Crypto_Exchange/headers/User.h
-
 D:/programowanie/GitHub/c++/Crypto_Exchange/headers/Admin.h
 ExchangeDatabase.h
 D:/programowanie/GitHub/c++/Crypto_Exchange/headers/ExchangeDatabase.h

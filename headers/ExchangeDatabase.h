@@ -16,26 +16,21 @@ using namespace std;
 class ExchangeDatabase {
 
 private:
-    string adminLogin = "admin";
-    string adminPassword = "admin";
     int numbersOfCryptoInBase;
-    vector<Currency> cryptoBase;
-    vector<User> accounts;
+    vector<Currency*> cryptoBase;
+    vector<User*> accounts;
 
 public:
     ExchangeDatabase();
-    string getAdminLogin();
-    string getAdminPassword();
-    vector<Currency> getCryptoBase();
+    vector<Currency*> getCryptoBase();
     int getNumberOfCryptoInBase() const;
-    void addCurrency(const Currency& currency);
+    void addCurrency(Currency* currency);
     void removeCurrency(int position);
     bool checkAvailabilityOfLogin(const string& login);
-    void addAccount(User user);
+    void addAccount(User* user);
     bool checkDataToAccount(const string& login, const string& password);
-    User getUser(const string& login);
-    void updateData(User user);
-    vector<User> getAccounts();
+    User* getUser(const string& login);
+    vector<User*> getAccounts();
 };
 
 

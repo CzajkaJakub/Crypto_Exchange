@@ -8,13 +8,15 @@
 
 #include "ExchangeDatabase.h"
 
-class Admin{
+class Admin: public User{
 public:
-    static void addNewCurrencyToDatabase(ExchangeDatabase& database);
-    static void deleteTheCurrency(ExchangeDatabase& database);
-    static void showAvailableCryptos(ExchangeDatabase &database);
-    static void showAllAccountsInDatabase(ExchangeDatabase &database);
+    Admin(string login, string password): User(login, password){};
+    static void addNewCurrencyToDatabase(ExchangeDatabase* database);
+    static void deleteTheCurrency(ExchangeDatabase* database);
+    static void showAvailableCryptos(ExchangeDatabase* database);
+    static void showAllAccountsInDatabase(ExchangeDatabase* database);
 };
+
 
 
 #endif //CRYPTO_EXCHANGE_ADMIN_H
