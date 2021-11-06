@@ -2,27 +2,30 @@
 #include "headers/ExchangeDatabase.h"
 #include "headers/Admin.h"
 
-void adminUser(ExchangeDatabase& database);
-
-int logIntoServerAsAdmin(ExchangeDatabase database);
+void adminUser(ExchangeDatabase* database);
 
 string callLogin();
 
 string callPassword();
 
-void createCurrencies(ExchangeDatabase &database);
+void createCurrencies(ExchangeDatabase* database);
 
-void userMenu(ExchangeDatabase &database);
+void userMenu(ExchangeDatabase* database);
 
-void createAnAccount(ExchangeDatabase &database);
+void createAnAccount(ExchangeDatabase* database);
 
-void logInIntoService(ExchangeDatabase &database);
+void logInIntoService(ExchangeDatabase* database);
+
+void createAnAdminAccount(ExchangeDatabase *pDatabase);
 
 using namespace std;
 
 int main() {
     ExchangeDatabase exchangeDatabase;
-    createCurrencies(exchangeDatabase);
+    ExchangeDatabase* database = &exchangeDatabase;
+    createCurrencies(database);
+    createAnAdminAccount(database);
+
 
     char response;
     int programIsOpen = 1;
@@ -39,16 +42,23 @@ int main() {
 
         switch (tolower(response)) {
             case 'u' :
-                userMenu(exchangeDatabase); break;
+                userMenu(database); break;
             case 'a' :
-                adminUser(exchangeDatabase); break;
+                adminUser(database); break;
             case 'q' : programIsOpen = 0; break;
             default: cout << "Wrong data! Try again" << endl;
         }
     }
 }
 
-void userMenu(ExchangeDatabase& database) {
+void createAnAdminAccount(ExchangeDatabase* database) {
+    string adminLogin = "admin";
+    string adminPassword = "admin";
+    auto *admin = new Admin(adminLogin, adminPassword);
+    database->addAccount(admin);
+}
+
+void userMenu(ExchangeDatabase* database) {
 
     int loggingPanel = 1;
     char response;
@@ -74,7 +84,7 @@ void userMenu(ExchangeDatabase& database) {
     }
 }
 
-void logInIntoService(ExchangeDatabase &database) {
+void logInIntoService(ExchangeDatabase* database) {
     string login;
     string password;
     int logged;
@@ -86,9 +96,9 @@ void logInIntoService(ExchangeDatabase &database) {
     cout << "Type your password" << endl;
     getline(cin, password);
 
-    if(database.checkDataToAccount(login, password)){
-        User user = database.getUser(login);
-        cout << "Welcome again " << user.getLogin() << endl;
+    if(database->checkDataToAccount(login, password)){
+        User* user = database->getUser(login);
+        cout << "Welcome again " << user->getLogin() << endl;
         logged = 1;
         double value;
 
@@ -107,120 +117,136 @@ void logInIntoService(ExchangeDatabase &database) {
                 case 'a' :
                     cout << "Type amount to add: " << endl;
                     cin >> value;
-                    user.addMoney(value); break;
+                    user->addMoney(value); break;
                 case 'w' :
                     cout << "Type amount to withdraw: " << endl;
                     cin >> value;
-                    user.withDrawYourMoney(value); break;
+                    user->withDrawYourMoney(value); break;
                 case 's' :
-                    cout << "your money : " << user.getDollarAmount() << endl; break;
+                    cout << "your money : " << user->getDollarAmount() << endl; break;
                 case 'c' :
                     cout << "Type your new password: " << endl;
                     cin >> newPassword;
-                    user.changePassword(newPassword);
+                    user->changePassword(newPassword);
                     break;
                 case 'q' :
-                    database.updateData(user);
                     logged = 0;
                     break;
                 default:
                     cout << "Wrong data! Try again" << endl;
             }
         }
-    }else{
-        cout << "Wrong data, please try again!" << endl;
     }
 
 }
 
-void createAnAccount(ExchangeDatabase& database) {
+void createAnAccount(ExchangeDatabase* database) {
     string login;
     string password;
 
     cout << "Creating account, please type your login" << endl;
     getline(cin, login);
 
-    if(database.checkAvailabilityOfLogin(login)){
+    if(database->checkAvailabilityOfLogin(login)){
         cout << "Type your password" << endl;
         getline(cin, password);
-        User user = User(login, password);
-        database.addAccount(user);
+        User *user = new User(login, password);
+        database->addAccount(user);
         cout << "Account was created" << endl;
         return;
     }
 }
 
-void adminUser(ExchangeDatabase& database) {
+void adminUser(ExchangeDatabase* database) {
 
     char response;
     int logged;
 
-    logged = logIntoServerAsAdmin(database);
-
-    while(logged == 1){
-        cout << "\nChoose an action as admin: \n"
-                "A - Add new crypto to the database\n"
-                "S - Show all currencies in database\n"
-                "D - Delete a currency\n"
-                "N - Show number of currencies in a database\n"
-                "K - Show all accounts in database\n"
-                "Q - Log out\n" << endl;
-
-        cin >> response;
-        fflush(stdin);
-
-        switch (tolower(response)) {
-            case 'a' :
-                Admin::addNewCurrencyToDatabase(database); break;
-            case 's' :
-                Admin::showAvailableCryptos(database); break;
-            case 'd' :
-                Admin::deleteTheCurrency(database); break;
-            case 'n' :
-                cout << "\nNumber od currencies in a database : " << database.getNumberOfCryptoInBase() << endl;
-                break;
-            case 'k' :
-                Admin::showAllAccountsInDatabase(database); break;
-            case 'q' : logged = 0; break;
-            default: cout << "Wrong data! Try again" << endl;
-        }
-    }
-}
-
-void createCurrencies(ExchangeDatabase& database) {                  // currency's values was taken from binance exchange 1.11.2021
-    Currency bitcoin = Currency("Bitcoin", 62195.39);
-    Currency ethereum = Currency("Ethereum", 4343.19);
-    Currency bnb = Currency("Bnb", 538.42);
-    Currency cardano = Currency("Cardano", 1.99);
-    Currency solana = Currency("Solana", 206.07);
-    Currency xrp = Currency("XRP", 1.10);
-    Currency polkadot = Currency("Polkadot", 45.00);
-    Currency avalanche = Currency("Avalanche", 63.64);
-    Currency dogeCoin = Currency("Doge Coin", 0.274611);
-    Currency terra = Currency("Terra", 43.15);
-
-    database.addCurrency(bitcoin);
-    database.addCurrency(ethereum);
-    database.addCurrency(bnb);
-    database.addCurrency(cardano);
-    database.addCurrency(solana);
-    database.addCurrency(xrp);
-    database.addCurrency(avalanche);
-    database.addCurrency(dogeCoin);
-    database.addCurrency(polkadot);
-    database.addCurrency(terra);
-}
-
-int logIntoServerAsAdmin(ExchangeDatabase database) {
     string login = callLogin();
     string password = callPassword();
 
-    if(login == database.getAdminLogin() && password == database.getAdminPassword()){
-        return 1;
-    }else{
-        cout << "Wrong data!" << endl;
-        return 0;
+    while(database->checkDataToAccount(login, password)){
+        User* admin = database->getUser(login);
+        cout << "Welcome again " << admin->getLogin() << endl;
+        logged = 1;
+        double value;
+        string newPassword;
+
+        while(logged == 1){
+            cout << "\nChoose an action as admin: \n"
+                    "A - Add new crypto to the database\n"
+                    "S - Show all currencies in database\n"
+                    "D - Delete a currency\n"
+                    "N - Show number of currencies in a database\n"
+                    "K - Show all accounts in database\n"
+                    "O - Add money to your account\n"
+                    "W - Withdraw your money\n"
+                    "C - change your password\n"
+                    "L - Show your dollar amount\n"
+                    "Q - Log out\n" << endl;
+
+            cin >> response;
+            fflush(stdin);
+
+            switch (tolower(response)) {
+                case 'a' :
+                    Admin::addNewCurrencyToDatabase(database); break;
+                case 's' :
+                    Admin::showAvailableCryptos(database); break;
+                case 'd' :
+                    Admin::deleteTheCurrency(database); break;
+                case 'n' :
+                    cout << "\nNumber od currencies in a database : " << database->getNumberOfCryptoInBase() << endl;
+                    break;
+                case 'k' :
+                    Admin::showAllAccountsInDatabase(database); break;
+
+                case 'o' :
+                    cout << "Type amount to add: " << endl;
+                    cin >> value;
+                    admin->addMoney(value); break;
+                case 'w' :
+                    cout << "Type amount to withdraw: " << endl;
+                    cin >> value;
+                    admin->withDrawYourMoney(value); break;
+                case 'l' :
+                    cout << "your money : " << admin->getDollarAmount() << endl; break;
+                case 'c' :
+                    cout << "Type your new password: " << endl;
+                    cin >> newPassword;
+                    admin->changePassword(newPassword);
+                    break;
+                case 'q' : logged = 0; break;
+                default:
+                    cout << "Wrong data! Try again" << endl;
+            }
+        }
+        return;
     }
+}
+
+void createCurrencies(ExchangeDatabase* database) {                  // currency's values was taken from binance exchange 1.11.2021
+    Currency *bitcoin = new Currency("Bitcoin", 62195.39);
+    Currency *ethereum = new Currency("Ethereum", 4343.19);
+    Currency *bnb = new Currency("Bnb", 538.42);
+    Currency *cardano = new Currency("Cardano", 1.99);
+    Currency *solana = new Currency("Solana", 206.07);
+    Currency *xrp = new Currency("XRP", 1.10);
+    Currency *polkadot = new Currency("Polkadot", 45.00);
+    Currency *avalanche = new Currency("Avalanche", 63.64);
+    Currency *dogeCoin = new Currency("Doge Coin", 0.274611);
+    Currency *terra = new Currency("Terra", 43.15);
+
+    database->addCurrency(bitcoin);
+    database->addCurrency(ethereum);
+    database->addCurrency(bnb);
+    database->addCurrency(cardano);
+    database->addCurrency(solana);
+    database->addCurrency(xrp);
+    database->addCurrency(avalanche);
+    database->addCurrency(dogeCoin);
+    database->addCurrency(polkadot);
+    database->addCurrency(terra);
 }
 
 string callPassword() {

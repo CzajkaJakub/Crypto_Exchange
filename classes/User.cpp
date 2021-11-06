@@ -10,6 +10,7 @@ using namespace std;
 User::User(string login, string password) {
     this -> login = login;
     this -> password = password;
+    this -> dollarAmount = 0;
 }
 
 string User::getLogin() {
