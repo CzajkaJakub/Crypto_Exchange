@@ -17,6 +17,7 @@ CMakeFiles/Crypto_Exchange.dir/classes/ExchangeDatabase.cpp.obj: \
  ../headers/User.h
 CMakeFiles/Crypto_Exchange.dir/classes/User.cpp.obj: \
  ../classes/User.cpp \
+ ../headers/Currency.h \
  ../headers/User.h
 CMakeFiles/Crypto_Exchange.dir/main.cpp.obj: \
  ../headers/Admin.h \

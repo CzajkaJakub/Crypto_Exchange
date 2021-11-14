@@ -66,4 +66,19 @@ vector<User*> ExchangeDatabase::getAccounts() {
     return accounts;
 }
 
+Currency* ExchangeDatabase::getCurrency() {
+
+    Currency *cur = nullptr;
+    cout << "Type a currency to buy" << endl;
+    string currency;
+    getline(cin, currency);
+
+    for(auto crypto : cryptoBase){
+        if(crypto->getName() == currency){
+            return crypto;
+        }
+    }
+    return cur;
+}
+
 

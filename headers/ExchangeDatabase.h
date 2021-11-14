@@ -7,7 +7,6 @@
 
 #include <string>
 #include <vector>
-#include "Currency.h"
 #include "User.h"
 
 
@@ -19,7 +18,6 @@ private:
     int numbersOfCryptoInBase;
     vector<Currency*> cryptoBase;
     vector<User*> accounts;
-
 public:
     ExchangeDatabase();
     vector<Currency*> getCryptoBase();
@@ -29,6 +27,7 @@ public:
     bool checkAvailabilityOfLogin(const string& login);
     void addAccount(User* user);
     bool checkDataToAccount(const string& login, const string& password);
+    Currency* getCurrency();
     User* getUser(const string& login);
     vector<User*> getAccounts();
 };
