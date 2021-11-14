@@ -2,22 +2,14 @@
 #include "headers/ExchangeDatabase.h"
 #include "headers/Admin.h"
 
-void adminUser(ExchangeDatabase* database);
-
 string callLogin();
-
 string callPassword();
-
+void adminUser(ExchangeDatabase* database);
 void createCurrencies(ExchangeDatabase* database);
-
 void userMenu(ExchangeDatabase* database);
-
 void createAnAccount(ExchangeDatabase* database);
-
 void logInIntoService(ExchangeDatabase* database);
-
 void createAnAdminAccount(ExchangeDatabase *pDatabase);
-
 using namespace std;
 
 int main() {
@@ -25,7 +17,6 @@ int main() {
     ExchangeDatabase* database = &exchangeDatabase;
     createCurrencies(database);
     createAnAdminAccount(database);
-
 
     char response;
     int programIsOpen = 1;
@@ -108,6 +99,9 @@ void logInIntoService(ExchangeDatabase* database) {
                     "W - Withdraw your money\n"
                     "S - Show your dollar amount\n"
                     "C - change your password\n"
+                    "B - buy currency\n"
+                    "Y - show your crypto wallet\n"
+                    "P - Sell your crypto\n"
                     "Q - Log out\n" << endl;
 
             cin >> response;
@@ -129,8 +123,14 @@ void logInIntoService(ExchangeDatabase* database) {
                     cin >> newPassword;
                     user->changePassword(newPassword);
                     break;
+                case 'y' :
+                    user->showYourCryptoWallet(); break;
+                case 'b':
+                    user->buyCurrency(database->getCurrency()); break;
                 case 'q' :
                     logged = 0;
+                    break;
+                case 'p' : user->sellYourCrypto(database->getCurrency());
                     break;
                 default:
                     cout << "Wrong data! Try again" << endl;
@@ -181,8 +181,11 @@ void adminUser(ExchangeDatabase* database) {
                     "K - Show all accounts in database\n"
                     "O - Add money to your account\n"
                     "W - Withdraw your money\n"
+                    "Y - show your crypto wallet\n"
                     "C - change your password\n"
+                    "B - buy currency\n"
                     "L - Show your dollar amount\n"
+                    "P - Sell your crypto\n"
                     "Q - Log out\n" << endl;
 
             cin >> response;
@@ -200,7 +203,8 @@ void adminUser(ExchangeDatabase* database) {
                     break;
                 case 'k' :
                     Admin::showAllAccountsInDatabase(database); break;
-
+                case 'y' :
+                    admin->showYourCryptoWallet(); break;
                 case 'o' :
                     cout << "Type amount to add: " << endl;
                     cin >> value;
@@ -215,6 +219,10 @@ void adminUser(ExchangeDatabase* database) {
                     cout << "Type your new password: " << endl;
                     cin >> newPassword;
                     admin->changePassword(newPassword);
+                    break;
+                case 'b':
+                    admin->buyCurrency(database->getCurrency()); break;
+                case 'p' : admin->sellYourCrypto(database->getCurrency());
                     break;
                 case 'q' : logged = 0; break;
                 default:
@@ -248,14 +256,12 @@ void createCurrencies(ExchangeDatabase* database) {                  // currency
     database->addCurrency(polkadot);
     database->addCurrency(terra);
 }
-
 string callPassword() {
     cout << "Type admin password" << endl;
     string password;
     cin >> password;
     return password;
 }
-
 string callLogin() {
     cout << "Type admin login" << endl;
     string login;

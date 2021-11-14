@@ -10,9 +10,11 @@
 using namespace std;
 
 class Currency {
+
 private:
     string name;
     double value;
+
 public:
     Currency(string name, double value);
     double getValue() const;

@@ -10,9 +10,8 @@
 void Admin::deleteTheCurrency(ExchangeDatabase* database) {
     int posInVector = 0;
 
-    string name;
     cout << "\nType a name a currency to delete it from the base" << endl;
-    cin >> name;
+    string name = Admin::getNameFromUser();
 
     for(Currency* currency : database->getCryptoBase()){
         if(currency->getName() == name){
@@ -23,20 +22,16 @@ void Admin::deleteTheCurrency(ExchangeDatabase* database) {
             posInVector++;
         }
     }
-
     cout << "Currency you typed doesn't exist in a database" << endl;
-
 }
 
+
 void Admin::addNewCurrencyToDatabase(ExchangeDatabase* database) {
+    cout << "Type a name of currency to add" << endl;
+    string name = Admin::getNameFromUser();
 
-    string name;
-    cout << "Type a name of currency" << endl;
-    getline(cin, name);
-
-    double value;
     cout << "Type a value of a currency in dollars." << endl;
-    cin >> value;
+    double value = Admin::getValueFromUser();
 
     for(Currency* cryptoName : database->getCryptoBase()){
         if(cryptoName->getName() == name){
@@ -62,6 +57,19 @@ void Admin::showAllAccountsInDatabase(ExchangeDatabase* database) {
         cout << "Login: " << account->getLogin() << " Password: "<< account->getPassword() << " Amount: " << account->getDollarAmount()<<endl;
     }
 }
+
+string Admin::getNameFromUser() {
+    string name;
+    getline(cin, name);
+    return name;
+}
+
+double Admin::getValueFromUser() {
+    double value;
+    cin >> value;
+    return value;
+}
+
 
 
 
