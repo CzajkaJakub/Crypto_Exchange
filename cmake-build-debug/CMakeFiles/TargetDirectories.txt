@@ -1,0 +1,3 @@
+D:/programowanie/GitHub/c++/Crypto_Exchange/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/programowanie/GitHub/c++/Crypto_Exchange/cmake-build-debug/CMakeFiles/Crypto_Exchange.dir
+D:/programowanie/GitHub/c++/Crypto_Exchange/cmake-build-debug/CMakeFiles/rebuild_cache.dir
