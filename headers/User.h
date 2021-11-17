@@ -22,16 +22,14 @@ public:
     User(string login, string password);
     string getLogin();
     string getPassword();
-
-    void setDollarAmount(double value);
-    double getDollarAmount();
     void addMoney(double value);
-
     void withDrawYourMoney(double value);
+    double getDollarAmount() const;
     void changePassword(string password);
-    void buyCurrency(Currency* currency);
-    void addCryptoToWallet(Currency *pCurrency, double d);
     void showYourCryptoWallet();
+    void buyCurrency(Currency* currency);
+    void setDollarAmount(double value);
+    void addCryptoToWallet(Currency *pCurrency, double d);
 
     void sellYourCrypto(Currency *pCurrency);
 };
