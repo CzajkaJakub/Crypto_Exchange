@@ -11,25 +11,13 @@ using namespace std;
 ExchangeDatabase::ExchangeDatabase() {
     numbersOfCryptoInBase = 0;
 }
-
-int ExchangeDatabase::getNumberOfCryptoInBase() const {
-    return numbersOfCryptoInBase;
-}
-
-vector<Currency*> ExchangeDatabase::getCryptoBase() {
-    return cryptoBase;
-}
-
 void ExchangeDatabase::addCurrency(Currency* currency) {
     cryptoBase.push_back(currency);
     numbersOfCryptoInBase++;
 }
-
-void ExchangeDatabase::removeCurrency(int position) {
-    cryptoBase.erase(cryptoBase.begin()+position);
-    numbersOfCryptoInBase --;
+void ExchangeDatabase::addAccount(User* user) {
+    accounts.push_back(user);
 }
-
 bool ExchangeDatabase::checkAvailabilityOfLogin(const string& login) {
     for(User* account : accounts){
         if(account->getLogin() == login){
@@ -39,11 +27,6 @@ bool ExchangeDatabase::checkAvailabilityOfLogin(const string& login) {
     }
     return true;
 }
-
-void ExchangeDatabase::addAccount(User* user) {
-    accounts.push_back(user);
-}
-
 bool ExchangeDatabase::checkDataToAccount(const string& login, const string& password) {
     for(User* account : accounts){
         if(account->getLogin() == login && account->getPassword() == password){
@@ -53,7 +36,6 @@ bool ExchangeDatabase::checkDataToAccount(const string& login, const string& pas
     cout << "Incorrect data, try again!" << endl;
     return false;
 }
-
 User* ExchangeDatabase::getUser(const string& login) {
     for(User* account : accounts){
         if(account->getLogin() == login){
@@ -61,11 +43,6 @@ User* ExchangeDatabase::getUser(const string& login) {
         }
     }
 }
-
-vector<User*> ExchangeDatabase::getAccounts() {
-    return accounts;
-}
-
 Currency* ExchangeDatabase::getCurrency() {
 
     Currency *cur = nullptr;
@@ -79,6 +56,21 @@ Currency* ExchangeDatabase::getCurrency() {
         }
     }
     return cur;
+}
+void ExchangeDatabase::removeCurrency(int position) {
+    cryptoBase.erase(cryptoBase.begin()+position);
+    numbersOfCryptoInBase --;
+}
+int ExchangeDatabase::getNumberOfCryptoInBase() const {
+    return numbersOfCryptoInBase;
+}
+
+vector<Currency*> ExchangeDatabase::getCryptoBase() {
+    return cryptoBase;
+}
+
+vector<User*> ExchangeDatabase::getAccounts() {
+    return accounts;
 }
 
 

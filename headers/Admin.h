@@ -11,11 +11,11 @@
 class Admin: public User{
 public:
     Admin(string login, string password): User(login, password){};
+    static void addNewCurrencyToDatabase(ExchangeDatabase* database);
+    static void showAvailableCryptos(ExchangeDatabase* database);
+    static void deleteTheCurrency(ExchangeDatabase* database);
     static string getNameFromUser();
     static double getValueFromUser();
-    static void addNewCurrencyToDatabase(ExchangeDatabase* database);
-    static void deleteTheCurrency(ExchangeDatabase* database);
-    static void showAvailableCryptos(ExchangeDatabase* database);
     static void showAllAccountsInDatabase(ExchangeDatabase* database);
 };
 
