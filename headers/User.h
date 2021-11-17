@@ -10,8 +10,6 @@
 #include <map>
 #include "Currency.h"
 
-
-
 using namespace std;
 
 class User{
