@@ -5,9 +5,8 @@
 #include "../headers/Currency.h"
 
 
-
 Currency::Currency(string name, double value) {
-    this->name = name;
+    this->name = std::move(name);
     this->value = value;
 }
 

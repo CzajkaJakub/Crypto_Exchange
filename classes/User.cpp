@@ -8,8 +8,8 @@
 using namespace std;
 
 User::User(string login, string password) {
-    this -> login = login;
-    this -> password = password;
+    this -> login = std::move(login);
+    this -> password = std::move(password);
     this -> dollarAmount = 0;
 }
 string User::getLogin() {
@@ -31,8 +31,8 @@ void User::withDrawYourMoney(double value) {
 double User::getDollarAmount() const {
     return dollarAmount;
 }
-void User::changePassword(string password) {
-    this->password = password;
+void User::changePassword(string newPassword) {
+    this->password = newPassword;
 }
 void User::showYourCryptoWallet() {
     cout << "Your wallet: " << endl;

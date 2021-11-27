@@ -42,16 +42,16 @@ int main() {
     }
 }
 void createCurrencies(ExchangeDatabase* database) {                  // currency's values was taken from binance exchange 1.11.2021
-    Currency *bitcoin = new Currency("Bitcoin", 62195.39);
-    Currency *ethereum = new Currency("Ethereum", 4343.19);
-    Currency *bnb = new Currency("Bnb", 538.42);
-    Currency *cardano = new Currency("Cardano", 1.99);
-    Currency *solana = new Currency("Solana", 206.07);
-    Currency *xrp = new Currency("XRP", 1.10);
-    Currency *polkadot = new Currency("Polkadot", 45.00);
-    Currency *avalanche = new Currency("Avalanche", 63.64);
-    Currency *dogeCoin = new Currency("Doge Coin", 0.274611);
-    Currency *terra = new Currency("Terra", 43.15);
+    auto *bitcoin = new Currency("Bitcoin", 62195.39);
+    auto *ethereum = new Currency("Ethereum", 4343.19);
+    auto *bnb = new Currency("Bnb", 538.42);
+    auto *cardano = new Currency("Cardano", 1.99);
+    auto *solana = new Currency("Solana", 206.07);
+    auto *xrp = new Currency("XRP", 1.10);
+    auto *polkadot = new Currency("Polkadot", 45.00);
+    auto *avalanche = new Currency("Avalanche", 63.64);
+    auto *dogeCoin = new Currency("Doge Coin", 0.274611);
+    auto *terra = new Currency("Terra", 43.15);
 
     database->addCurrency(bitcoin);
     database->addCurrency(ethereum);

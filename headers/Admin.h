@@ -6,11 +6,13 @@
 #define CRYPTO_EXCHANGE_ADMIN_H
 
 
+#include <utility>
+
 #include "ExchangeDatabase.h"
 
 class Admin: public User{
 public:
-    Admin(string login, string password): User(login, password){};
+    Admin(string login, string password): User(std::move(login), std::move(password)){};
     static void addNewCurrencyToDatabase(ExchangeDatabase* database);
     static void showAvailableCryptos(ExchangeDatabase* database);
     static void deleteTheCurrency(ExchangeDatabase* database);
