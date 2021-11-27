@@ -14,11 +14,6 @@
 using namespace std;
 
 class User: public Account{
-private:
-    string login;
-    string password;
-    double dollarAmount;
-    map<Currency*, double> wallet;
 public:
     User(string login, string password);
     string getLogin() override;
