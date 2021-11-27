@@ -32,7 +32,6 @@ public:
     void buyCurrency(Currency* currency);
     void setDollarAmount(double value);
     void addCryptoToWallet(Currency *pCurrency, double d);
-
     void sellYourCrypto(Currency *pCurrency);
 };
 

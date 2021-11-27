@@ -20,7 +20,6 @@ private:
     vector<User*> accounts;
 public:
     ExchangeDatabase();
-
     void addCurrency(Currency* currency);
     void addAccount(User* user);
     bool checkAvailabilityOfLogin(const string& login);
@@ -30,7 +29,6 @@ public:
     void removeCurrency(int position);
     int getNumberOfCryptoInBase() const;
     vector<User*> getAccounts();
-
     vector<Currency*> getCryptoBase();
 };
 
