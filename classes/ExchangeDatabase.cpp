@@ -42,6 +42,7 @@ User* ExchangeDatabase::getUser(const string& login) {
             return account;
         }
     }
+    return nullptr;
 }
 Currency* ExchangeDatabase::getCurrency() {
 

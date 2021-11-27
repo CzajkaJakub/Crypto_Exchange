@@ -9,12 +9,13 @@
 #include <string>
 #include <map>
 #include "Currency.h"
+#include "Account.h"
 
 
 
 using namespace std;
 
-class User{
+class User: public Account{
 private:
     string login;
     string password;
@@ -22,17 +23,17 @@ private:
     map<Currency*, double> wallet;
 public:
     User(string login, string password);
-    string getLogin();
-    string getPassword();
-    void addMoney(double value);
-    void withDrawYourMoney(double value);
-    double getDollarAmount() const;
-    void changePassword(string password);
-    void showYourCryptoWallet();
-    void buyCurrency(Currency* currency);
-    void setDollarAmount(double value);
-    void addCryptoToWallet(Currency *pCurrency, double d);
-    void sellYourCrypto(Currency *pCurrency);
+    string getLogin() override;
+    string getPassword() override;
+    void addMoney(double value) override;
+    void withDrawYourMoney(double value) override;
+    double getDollarAmount() const override;
+    void changePassword(string newPassword) override;
+    void showYourCryptoWallet() override;
+    void buyCurrency(Currency* currency) override;
+    void setDollarAmount(double value) override;
+    void addCryptoToWallet(Currency *pCurrency, double d) override;
+    void sellYourCrypto(Currency *pCurrency) override;
 };
 
 #endif //CRYPTO_EXCHANGE_USER_H
