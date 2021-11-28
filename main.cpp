@@ -178,72 +178,88 @@ void adminUser(ExchangeDatabase* database) {
 
     string login = callLogin();
     string password = callPassword();
+    if(login == "admin") {
+        while (database->checkDataToAccount(login, password)) {
+            User *admin = database->getUser(login);
+            cout << "Welcome again " << admin->getLogin() << endl;
+            logged = 1;
+            double value;
+            string newPassword;
 
-    while(database->checkDataToAccount(login, password)){
-        User* admin = database->getUser(login);
-        cout << "Welcome again " << admin->getLogin() << endl;
-        logged = 1;
-        double value;
-        string newPassword;
+            while (logged == 1) {
+                cout << "\nChoose an action as admin: \n"
+                        "A - Add new crypto to the database\n"
+                        "S - Show all currencies in database\n"
+                        "D - Delete a currency\n"
+                        "N - Show number of currencies in a database\n"
+                        "K - Show all accounts in database\n"
+                        "Y - show your crypto wallet\n"
+                        "O - Add money to your account\n"
+                        "W - Withdraw your money\n"
+                        "L - Show your dollar amount\n"
+                        "C - change your password\n"
+                        "B - buy currency\n"
+                        "P - Sell your crypto\n"
+                        "Q - Log out\n" << endl;
 
-        while(logged == 1){
-            cout << "\nChoose an action as admin: \n"
-                    "A - Add new crypto to the database\n"
-                    "S - Show all currencies in database\n"
-                    "D - Delete a currency\n"
-                    "N - Show number of currencies in a database\n"
-                    "K - Show all accounts in database\n"
-                    "Y - show your crypto wallet\n"
-                    "O - Add money to your account\n"
-                    "W - Withdraw your money\n"
-                    "L - Show your dollar amount\n"
-                    "C - change your password\n"
-                    "B - buy currency\n"
-                    "P - Sell your crypto\n"
-                    "Q - Log out\n" << endl;
+                cin >> response;
+                fflush(stdin);
 
-            cin >> response;
-            fflush(stdin);
-
-            switch (tolower(response)) {
-                case 'a' :
-                    Admin::addNewCurrencyToDatabase(database); break;
-                case 's' :
-                    Admin::showAvailableCryptos(database); break;
-                case 'd' :
-                    Admin::deleteTheCurrency(database); break;
-                case 'n' :
-                    cout << "\nNumber od currencies in a database : " << database->getNumberOfCryptoInBase() << endl;
-                    break;
-                case 'k' :
-                    Admin::showAllAccountsInDatabase(database); break;
-                case 'y' :
-                    admin->showYourCryptoWallet(); break;
-                case 'o' :
-                    cout << "Type amount to add: " << endl;
-                    cin >> value;
-                    admin->addMoney(value); break;
-                case 'w' :
-                    cout << "Type amount to withdraw: " << endl;
-                    cin >> value;
-                    admin->withDrawYourMoney(value); break;
-                case 'l' :
-                    cout << "your money : " << admin->getDollarAmount() << endl; break;
-                case 'c' :
-                    cout << "Type your new password: " << endl;
-                    cin >> newPassword;
-                    admin->changePassword(newPassword);
-                    break;
-                case 'b':
-                    admin->buyCurrency(database->getCurrency()); break;
-                case 'p' : admin->sellYourCrypto(database->getCurrency());
-                    break;
-                case 'q' : logged = 0; break;
-                default:
-                    cout << "Wrong data! Try again" << endl;
+                switch (tolower(response)) {
+                    case 'a' :
+                        Admin::addNewCurrencyToDatabase(database);
+                        break;
+                    case 's' :
+                        Admin::showAvailableCryptos(database);
+                        break;
+                    case 'd' :
+                        Admin::deleteTheCurrency(database);
+                        break;
+                    case 'n' :
+                        cout << "\nNumber od currencies in a database : " << database->getNumberOfCryptoInBase()
+                             << endl;
+                        break;
+                    case 'k' :
+                        Admin::showAllAccountsInDatabase(database);
+                        break;
+                    case 'y' :
+                        admin->showYourCryptoWallet();
+                        break;
+                    case 'o' :
+                        cout << "Type amount to add: " << endl;
+                        cin >> value;
+                        admin->addMoney(value);
+                        break;
+                    case 'w' :
+                        cout << "Type amount to withdraw: " << endl;
+                        cin >> value;
+                        admin->withDrawYourMoney(value);
+                        break;
+                    case 'l' :
+                        cout << "your money : " << admin->getDollarAmount() << endl;
+                        break;
+                    case 'c' :
+                        cout << "Type your new password: " << endl;
+                        cin >> newPassword;
+                        admin->changePassword(newPassword);
+                        break;
+                    case 'b':
+                        admin->buyCurrency(database->getCurrency());
+                        break;
+                    case 'p' :
+                        admin->sellYourCrypto(database->getCurrency());
+                        break;
+                    case 'q' :
+                        logged = 0;
+                        break;
+                    default:
+                        cout << "Wrong data! Try again" << endl;
+                }
             }
+            return;
         }
-        return;
+    }else{
+        cout << "Wrong data" << endl;
     }
 }
 string callPassword() {

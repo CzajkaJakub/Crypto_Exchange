@@ -27,7 +27,7 @@ public:
     void showYourCryptoWallet() override;
     void buyCurrency(Currency* currency) override;
     void setDollarAmount(double value) override;
-    void addCryptoToWallet(Currency *pCurrency, double d) override;
+    void addCryptoToWallet(Currency *pCurrency, double amount) override;
     void sellYourCrypto(Currency *pCurrency) override;
 };
 

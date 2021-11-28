@@ -61,14 +61,14 @@ void User::buyCurrency(Currency* currency) {
        cout << "Wrong data entered!" << endl;
    }
 }
-void User::addCryptoToWallet(Currency *pCurrency, double d) {
+void User::addCryptoToWallet(Currency *pCurrency, double amount) {
     for(auto crypto : wallet){
         if(crypto.first->getName() == pCurrency->getName()){
-            wallet[crypto.first] = crypto.second + d;
+            wallet[crypto.first] = crypto.second + amount;
             return;
         }
     }
-    wallet[pCurrency] = d;
+    wallet[pCurrency] = amount;
 }
 void User::sellYourCrypto(Currency *pCurrency) {
     double count;

@@ -26,7 +26,6 @@ public:
     virtual void showYourCryptoWallet() = 0;
     virtual void buyCurrency(Currency* currency) = 0;
     virtual void setDollarAmount(double value) = 0;
-    virtual void addCryptoToWallet(Currency *pCurrency, double d) = 0;
-    virtual void sellYourCrypto(Currency *pCurrency) = 0;
-
+    virtual void addCryptoToWallet(Currency* pCurrency, double amount) = 0;
+    virtual void sellYourCrypto(Currency* pCurrency) = 0;
 };
