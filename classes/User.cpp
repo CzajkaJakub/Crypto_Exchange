@@ -51,7 +51,7 @@ void User::buyCurrency(Currency* currency) {
        cin >> count;
        value = count * currency->getValue();
        if(this->getDollarAmount() >= value){
-           cout << "you have bought " << count << " " << currency->getName() << " for : " << value << endl;
+           cout << "you have bought " << count << " " << currency->getName() << " for : " << value << "$" << endl;
            this->setDollarAmount(this->getDollarAmount() - value);
            this->addCryptoToWallet(currency, count);
        }else{

@@ -47,7 +47,7 @@ User* ExchangeDatabase::getUser(const string& login) {
 Currency* ExchangeDatabase::getCurrency() {
 
     Currency *cur = nullptr;
-    cout << "Type a currency to buy" << endl;
+    cout << "Type a currency to buy/sell" << endl;
     string currency;
     getline(cin, currency);
 
