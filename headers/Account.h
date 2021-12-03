@@ -7,15 +7,15 @@
 
 #endif //CRYPTO_EXCHANGE_ACCOUNT_H
 
-#include <string>
+
 #include <map>
+#include <string>
+#include "Currency.h"
+
+
+using namespace std;
 
 class Account{
-protected:
-    string login;
-    string password;
-    double dollarAmount;
-    map<Currency*, double> wallet;
 public:
     virtual string getLogin() = 0;
     virtual string getPassword() = 0;

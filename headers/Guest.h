@@ -1,28 +1,19 @@
 //
-// Created by Jakub on 29.10.2021.
+// Created by Jakub on 03.12.2021.
 //
 
-#ifndef CRYPTO_EXCHANGE_USER_H
-#define CRYPTO_EXCHANGE_USER_H
+#ifndef CRYPTO_EXCHANGE_GUEST_H
+#define CRYPTO_EXCHANGE_GUEST_H
 
 
 #include <string>
-#include <map>
+
 #include "Currency.h"
-#include "Guest.h"
+#include "Account.h"
 
 
-
-using namespace std;
-
-class User: public Account{
-private:
-    string login;
-    string password;
-    double dollarAmount;
-    map<Currency*, double> wallet;
+class Guest: public Account {
 public:
-    User(string login, string password);
     string getLogin() override;
     string getPassword() override;
     void addMoney(double value) override;
@@ -36,4 +27,5 @@ public:
     void sellYourCrypto(Currency *pCurrency) override;
 };
 
-#endif //CRYPTO_EXCHANGE_USER_H
+
+#endif //CRYPTO_EXCHANGE_GUEST_H

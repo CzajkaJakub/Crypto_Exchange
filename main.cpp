@@ -9,7 +9,10 @@ void createCurrencies(ExchangeDatabase* database);
 void userMenu(ExchangeDatabase* database);
 void createAnAccount(ExchangeDatabase* database);
 void logInIntoService(ExchangeDatabase* database);
-void createAnAdminAccount(ExchangeDatabase *pDatabase);
+void createAnAdminAccount(ExchangeDatabase *database);
+
+void logInIntoServiceAsGuest(ExchangeDatabase *pDatabase);
+
 using namespace std;
 
 int main() {
@@ -79,6 +82,7 @@ void userMenu(ExchangeDatabase* database) {
         cout << "\nChoose an action: \n"
                 "L - Login\n"
                 "C - Create an account\n"
+                "G - Login as guest\n"
                 "Q - Quit the logging panel" << endl;
 
         cin >> response;
@@ -87,11 +91,70 @@ void userMenu(ExchangeDatabase* database) {
         switch (tolower(response)) {
             case 'l' : logInIntoService(database); break;
             case 'c' : createAnAccount(database); break;
+            case 'g' : logInIntoServiceAsGuest(database); break;
             case 'q' : loggingPanel = 0; break;
             default: cout << "Wrong data! Try again" << endl;
         }
     }
 }
+
+void logInIntoServiceAsGuest(ExchangeDatabase *pDatabase) {
+    int logged = 1;
+    char response;
+    auto* guest = new Guest();
+    while (logged == 1) {
+        cout << "\nChoose an action as user: \n"
+                "X - Show all currencies in database\n"
+                "N - Show number of currencies in a database\n"
+                "A - Add money to your account\n"
+                "W - Withdraw your money\n"
+                "S - Show your dollar amount\n"
+                "C - Change your password\n"
+                "Y - show your crypto wallet\n"
+                "B - buy currency\n"
+                "P - Sell your crypto\n"
+                "Q - Log out\n" << endl;
+
+        cin >> response;
+        fflush(stdin);
+
+        switch (tolower(response)) {
+            case 'a' :
+                guest->addMoney(0);
+                break;
+            case 'w' :
+                guest->withDrawYourMoney(0);
+                break;
+            case 's' :
+                cout << "your money : " << guest->getDollarAmount() << endl;
+                break;
+            case 'c' :
+                guest->changePassword("");
+                break;
+            case 'y' :
+                guest->showYourCryptoWallet();
+                break;
+            case 'b':
+                guest->buyCurrency(nullptr);
+                break;
+            case 'q' :
+                logged = 0;
+                break;
+            case 'p' :
+                guest->sellYourCrypto(nullptr);
+                break;
+            case 'x' :
+                Admin::showAvailableCryptos(pDatabase);
+                break;
+            case 'n' :
+                cout << "\nNumber od currencies in a database : " << pDatabase->getNumberOfCryptoInBase() << endl;
+                break;
+            default:
+                cout << "Wrong data! Try again" << endl;
+        }
+    }
+}
+
 void logInIntoService(ExchangeDatabase* database) {
     string login;
     string password;
