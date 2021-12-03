@@ -59,9 +59,14 @@ string Admin::getNameFromUser() {
     return name;
 }
 double Admin::getValueFromUser() {
-    double value;
-    cin >> value;
-    return value;
+    try {
+        string value;
+        getline(cin, value);
+        return stod(value);
+    }catch (...){
+        cout << "Wrong data, try again" << endl;
+        return Admin::getValueFromUser();
+    }
 }
 
 
