@@ -113,6 +113,7 @@ void logInIntoServiceAsGuest(ExchangeDatabase *pDatabase) {
                 "Y - show your crypto wallet\n"
                 "B - buy currency\n"
                 "P - Sell your crypto\n"
+                "F - Is it guest account?\n"
                 "Q - Log out\n" << endl;
 
         cin >> response;
@@ -148,6 +149,9 @@ void logInIntoServiceAsGuest(ExchangeDatabase *pDatabase) {
                 break;
             case 'n' :
                 cout << "\nNumber od currencies in a database : " << pDatabase->getNumberOfCryptoInBase() << endl;
+                break;
+            case 'f' :
+                cout << "This is guest accout : " << guest->isItGuestAccount() << endl;
                 break;
             default:
                 cout << "Wrong data! Try again" << endl;

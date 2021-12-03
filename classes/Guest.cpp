@@ -42,3 +42,7 @@ void Guest::sellYourCrypto(Currency *pCurrency) {
     cout << "You can't sell crypto as guest!" << endl;
 }
 
+bool Guest::isItGuestAccount() const {
+    return (bool)guestAccount;
+}
+

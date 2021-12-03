@@ -13,6 +13,7 @@
 
 
 class Guest: public Account {
+    int guestAccount = 1;
 public:
     string getLogin() override;
     string getPassword() override;
@@ -25,6 +26,7 @@ public:
     void setDollarAmount(double value) override;
     void addCryptoToWallet(Currency *pCurrency, double amount) override;
     void sellYourCrypto(Currency *pCurrency) override;
+    bool isItGuestAccount() const;
 };
 
 
