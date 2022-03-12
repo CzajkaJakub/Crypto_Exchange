@@ -11,8 +11,6 @@
 #include "Currency.h"
 #include "Guest.h"
 
-
-
 using namespace std;
 
 class User: public Account{

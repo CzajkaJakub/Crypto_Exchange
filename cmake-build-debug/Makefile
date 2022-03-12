@@ -128,6 +128,30 @@ Crypto_Exchange/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crypto_Exchange.dir\build.make CMakeFiles/Crypto_Exchange.dir/build
 .PHONY : Crypto_Exchange/fast
 
+classes/Account.obj: classes/Account.cpp.obj
+.PHONY : classes/Account.obj
+
+# target to build an object file
+classes/Account.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crypto_Exchange.dir\build.make CMakeFiles/Crypto_Exchange.dir/classes/Account.cpp.obj
+.PHONY : classes/Account.cpp.obj
+
+classes/Account.i: classes/Account.cpp.i
+.PHONY : classes/Account.i
+
+# target to preprocess a source file
+classes/Account.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crypto_Exchange.dir\build.make CMakeFiles/Crypto_Exchange.dir/classes/Account.cpp.i
+.PHONY : classes/Account.cpp.i
+
+classes/Account.s: classes/Account.cpp.s
+.PHONY : classes/Account.s
+
+# target to generate assembly for a file
+classes/Account.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Crypto_Exchange.dir\build.make CMakeFiles/Crypto_Exchange.dir/classes/Account.cpp.s
+.PHONY : classes/Account.cpp.s
+
 classes/Admin.obj: classes/Admin.cpp.obj
 .PHONY : classes/Admin.obj
 
@@ -281,6 +305,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Crypto_Exchange
+	@echo ... classes/Account.obj
+	@echo ... classes/Account.i
+	@echo ... classes/Account.s
 	@echo ... classes/Admin.obj
 	@echo ... classes/Admin.i
 	@echo ... classes/Admin.s
